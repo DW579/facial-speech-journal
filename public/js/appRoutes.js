@@ -4,8 +4,13 @@ angular.module('facialApp').config(['$routeProvider', '$locationProvider', funct
 
     .when('/', {
         templateUrl: 'views/home.html'
-    }).
-    otherwise({
+    })
+
+    .when('/analyze', {
+      templateUrl: 'views/analyze.html'
+    })
+    
+    .otherwise({
       redirectTo: '/'
     });
 
