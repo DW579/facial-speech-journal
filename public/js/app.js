@@ -1,0 +1,1 @@
+angular.module('facialApp', ['ngRoute']);
