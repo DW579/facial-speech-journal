@@ -1,4 +1,11 @@
 <div ng-controller="AnalyzeController">
   <h1>Analyze Page</h1>
-  <video autoplay></video>
+  <video id="gum" autoplay muted></video>
+  <video id="recorded" autoplay loop></video>
+
+  <div>
+    <button id="record">Start Recording</button>
+    <button id="play" disabled>Play</button>
+    <button id="download" disabled>Download</button>
+  </div>
 </div>
