@@ -1,8 +1,8 @@
 angular.module('facialApp').controller('AnalyzeController', AnalyzeController);
 
+AnalyzeController.$inject = ['$scope', '$http', 'Analyze'];
 
-
-function AnalyzeController() {
+function AnalyzeController($scope, $http, Analyze) {
 
   'use strict';
 
@@ -35,6 +35,8 @@ function AnalyzeController() {
     audio: true,
     video: true
   };
+
+  var videoData;
 
   function handleSuccess(stream) {
     console.log('getUserMedia() got stream: ', stream);
@@ -137,7 +139,7 @@ function AnalyzeController() {
     a.style.display = 'none';
     a.href = url;
     a.download = 'test.wmv';
-    console.log("downloaded file: " + a.download);
+    videoData = a.download;
     document.body.appendChild(a);
     a.click();
     setTimeout(function() {
@@ -145,5 +147,8 @@ function AnalyzeController() {
       window.URL.revokeObjectURL(url);
     }, 100);
   }
+
+  // ------- Repuest to Microsoft --------
+
 
 }

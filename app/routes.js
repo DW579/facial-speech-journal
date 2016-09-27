@@ -6,4 +6,7 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, '../public', 'index.html'));
     });
 
+  app.post('/api/facialData', function(req, res) {
+    console.log("Posted!!!");
+  })
 }
