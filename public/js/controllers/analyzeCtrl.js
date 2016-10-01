@@ -148,7 +148,13 @@ function AnalyzeController($scope, $http, Analyze) {
     }, 100);
   }
 
-  // ------- Repuest to Microsoft --------
+  this.analyzeFacial = function(videoData) {
+    Analyze.createFacial(videoData).success(function() {
+      alert('download saved in backend success!!!');
+    }).error(function(){
+      alert('something went wrong!!!');
+    });
+  }
 
 
 }
