@@ -8,6 +8,5 @@ module.exports = function(app) {
 
   app.post('/api/facialData', function(req, res) {
     console.log(req.body.file);
-  })
-
+  });
 }
