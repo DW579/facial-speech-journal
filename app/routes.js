@@ -1,9 +1,5 @@
 var path = require('path');
 
-function testFunction(data) {
-  return data;
-}
-
 module.exports = function(app) {
 
   app.get('*', function(req, res) {
@@ -11,8 +7,8 @@ module.exports = function(app) {
     });
 
   app.post('/api/facialData', function(req, res) {
+    console.log(req.body.file);
     console.log("Posted!!!");
   })
 
-  console.log(testFunction());
 }

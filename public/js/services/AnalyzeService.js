@@ -7,7 +7,7 @@ angular.module('facialApp').factory('Analyze', ['$http', function($http) {
         url: '/api/facialData',
         method: 'POST',
         data: {
-          data: videoData
+          file: videoData
         }
       });
     }

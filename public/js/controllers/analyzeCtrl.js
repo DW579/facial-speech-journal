@@ -148,7 +148,7 @@ function AnalyzeController($scope, $http, Analyze) {
     }, 100);
   }
 
-  this.analyzeFacial = function(videoData) {
+  $scope.analyzeFacial = function() {
     Analyze.createFacial(videoData).success(function() {
       alert('download saved in backend success!!!');
     }).error(function(){
