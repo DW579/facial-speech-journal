@@ -11,6 +11,11 @@ angular.module('facialApp').config(['$routeProvider', '$locationProvider', funct
       controller: 'AnalyzeController'
     })
 
+    .when('/photoAnalyze', {
+      templateUrl: 'views/photoAnalyze.html',
+      controller: 'PhotoAnalyzeController'
+    })
+
     .otherwise({
       redirectTo: '/'
     });
